@@ -2,13 +2,13 @@
 
 <h3>Getting Started</h3>
 
-**Definitions:**
+<h5>Definitions:</h5>
 
-Microservice: A microservice is a software developemtn technique that structures an application as a collection of loosely coupled services.
+**Microservice**: A microservice is a software developemtn technique that structures an application as a collection of loosely coupled services.
 
-Docker: Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptop, data center VM's or the cloud.
+**Docker**: Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications, whether on laptop, data center VM's or the cloud.
 
-Kubernetes: Kuberenets is an open source system for automating deployment, scaling and management of containerized applications.
+**Kubernetes**: Kuberenets is an open source system for automating deployment, scaling and management of containerized applications.
 
 For more detail refer: https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/
 
@@ -54,7 +54,7 @@ Proceed further with creating a deployment file (yml or json) format.
 
 -> sudo kubectl get pods
 
-To check if there are any existing pods running
+To check if there are any **existing pods running**
 
 ->sudo kubectl get deployments
 
@@ -66,11 +66,11 @@ Opens up a GUI application to interact with cluster
 
 Now cd to the directory where deployment.yml file has been created.
 
-But before creating deployement, we need to create the image of application which our deployemtn.yml file will fetch from docker hub. In this case, checkout line 35 which states the name, that is the name of the image we need to create.
+But before creating deployement, we need to create the *image of application* which our deployemtn.yml file will fetch from docker hub. In this case, checkout line 35 which states the name, that is the name of the image we need to create.
 
 **Creating image:**
 
-Follow up with steps metioned:
+**Follow up with steps metioned:*
 
 Create a directory by mkdir where all files are to be kept.
 
@@ -90,7 +90,7 @@ Edit package.json file.
 
 *For creating image can also refer to this **link***: https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
-Now we need to containerise this, so we need a Docker File
+**Now we need to containerize this**, so we need a Docker File
 
 -> touch Dockerfile
 
@@ -100,7 +100,7 @@ Create the Dockerfile
 
 Here we mention the modules or file to be ignored when copying.
 
-Now to build this,
+**Now to build this,**
 
 -> sudo docker build -t dhruvgarg/exampleapp:v1.0.0 .
 
@@ -114,7 +114,7 @@ Push file to dockerhub
 
 -> sudo docker psuh dhruvgarg/exampleapp:v1.0.0
 
-Create deployement using kubectl
+**Create deployement using kubectl**
 
 -> sudo kubectl create -f deployment.yml
 
@@ -123,4 +123,5 @@ Check if the deployment if running successfully or not
 -> minikube dashboard
 
 **Source** - *Youtube James Quigley*:
+
 **https://www.youtube.com/watch?v=1xo-0gCVhTU&t=1015s&list=LLjdqfK_xlZcRbrythgwYdTA&index=6**
